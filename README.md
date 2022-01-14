@@ -1,16 +1,9 @@
 # song_database
 
-A new Flutter project.
+Sanatçı, albüm, single, ve şarkıları veritabanında tutabileceğiniz; görüntüleme, ekleme, düzenleme, silme gibi işlemleri yapabileceğiniz basit bir uygulama. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Uygulama Ubuntu 21.04 için derlenmiş ve test edilmiştir. Diğer masaüstü işletim sistemleri için de derlemeyi deneyebilirsiniz. Arayüz, mobil cihazlar için uygun değildir.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Uygulamanın çalışabilmesi için makinenizde MySql ile bir veri tabanı oluşturmanız ve oluşturduğunuz veri tabanınınn bilgilerini lib dizini altındaki db_helper.dart dosyası içinde bağlantı ayarları kısmına yazdıktan sonra derlemeniz gerekmektedir.	

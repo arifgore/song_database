@@ -4,9 +4,9 @@ abstract class DBHelper {
   static var settings = ConnectionSettings(
       host: 'localhost',
       port: 3306,
-      user: 'arif',
-      password: 'dummypassword',
-      db: 'music');
+      user: '',//database user name
+      password: '',//password for above user
+      db: '');//database name
   static Future<MySqlConnection> db = MySqlConnection.connect(settings);
 
   static void initDB() async {
@@ -96,6 +96,11 @@ abstract class DBHelper {
       await db.then((value) => value.query(
         'DELETE FROM singles WHERE single_id = ?', [id]));
     }
+  }
+
+  static void deleteMember(int artist_id, String member)async{
+    await db.then((value) => value.query(
+        'DELETE FROM group_members WHERE artist_id = ? AND member = ?', [artist_id,member]));
   }
 
   static Future<List<int>> getIdsByCondition(String tableName, String condition) async{
